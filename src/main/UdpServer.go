@@ -470,7 +470,7 @@ func main() {
 	loadConf()
 	go DealWithUdpPkg()
 	time.Sleep(time.Second * 3)
-	conn, err := net.Dial("udp", "sz-srv02.sz.ejoy.com:10433")
+	conn, err := net.Dial("udp", "127.0.0.1:10433")
 	defer conn.Close()
 	if err != nil {
 		os.Exit(1)
