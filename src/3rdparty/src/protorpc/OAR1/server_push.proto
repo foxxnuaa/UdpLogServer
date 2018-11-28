@@ -1,0 +1,17 @@
+
+
+package OAR1;
+
+option cc_generic_services = true;
+
+message PushRequest {
+	optional string msg = 1;
+}
+
+message PushResponse {
+	optional string msg = 1;
+}
+
+service PushService {
+	rpc updateState (PushRequest) returns (PushResponse);
+}

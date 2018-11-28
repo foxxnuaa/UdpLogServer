@@ -1,0 +1,4 @@
+{
+  "MysqlConf":"kdb:kingsoft123@tcp(10.20.104.175:3306)/kwebtool",
+  "HttpPort":"0.0.0.0:9015"
+}

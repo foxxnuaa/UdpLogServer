@@ -1,0 +1,5 @@
+{
+  "MysqlConf":"root:kingsoft@tcp(10.11.66.22:3306)/kresourcemonitor",
+  "HttpPort":"0.0.0.0:9115",
+  "UdpPort":"0.0.0.0:9900"
+}

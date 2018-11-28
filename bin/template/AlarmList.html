@@ -1,0 +1,49 @@
+<script id="AlarmList-template" type="text/x-handlebars-template">
+<div>
+<ul class="pagination" style="left:50%;top:5%">
+    <li><a href="javascript:;" onclick="onGetAlarmPre()">&laquo;</a></li>
+    <li><a href="javascript:;" onclick="onGetAlarmByPageNum(0)">1</a></li>
+    <li><a href="javascript:;" onclick="onGetAlarmByPageNum(1)">2</a></li>
+    <li><a href="javascript:;" onclick="onGetAlarmByPageNum(2)">3</a></li>
+    <li><a hhref="javascript:;" onclick="onGetAlarmByPageNum(3)">4</a></li>
+    <li><a href="javascript:;" onclick="onGetAlarmByPageNum(4)">5</a></li>
+    <li><a href="javascript:;" onclick="onGetAlarmNext()">&raquo;</a></li>
+</ul>
+</div>
+<table class="table table-bordered">
+    <caption>告警列表-{{PageNum}}</caption>
+    <thead>
+    <tr>
+        <th>时间</th>
+        <th>ServerId</th>
+        <th>Uid</th>
+        <th>资源类型</th>
+        <th>资源ID</th>
+        <th>过期时间(分钟)</th>
+        <th>触发值</th>
+        <th>当前值</th>
+        <th>阈值</th>
+        <th>资源名称</th>
+        <th>资源来源</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {{#each AlarmList}}
+    <tr>
+        <td>{{AlarmTimeStamp}}</td>
+        <td>{{ServerId}}</td>
+        <td>{{Uid}}</td>
+        <td>{{ResourceType}}</td>
+        <td>{{ResourceId}}</td>
+        <td>{{ExpireTime}}</td>
+        <td>{{ReportCount}}</td>
+        <td>{{CurrentCount}}</td>
+        <td>{{Threshold}}</td>
+        <td>{{ResourceName}}</td>
+        <td>{{Reason}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>
+</script>

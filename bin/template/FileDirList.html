@@ -1,0 +1,18 @@
+<script id="DirList_template" type="text/x-handlebars-template">
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>文件夹</th>
+    </tr>
+    </thead>
+<tbody>
+
+{{#each DirList}}
+<tr>
+    <td><a href="javascript:GetFileList('{{FileName}}')">{{FileName}}</a></td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+</script>

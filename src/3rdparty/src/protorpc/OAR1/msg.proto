@@ -1,0 +1,22 @@
+
+
+package OAR1;
+
+option cc_generic_services = true;
+
+message ClickRequest {
+	optional int32 x = 1;
+	optional int32 y = 2;
+	optional string timeClick = 3;
+}
+
+message ClickResponse {
+	optional int32 x = 1;
+	optional int32 y = 2;
+	optional string timeClick = 3;
+	optional int32 durationSend = 4;
+}
+
+service ClickService {
+	rpc echo (ClickRequest) returns (ClickResponse);
+}

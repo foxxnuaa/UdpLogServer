@@ -1,0 +1,30 @@
+<script id="ResourceSlice-template" type="text/x-handlebars-template">
+    <div>
+        <div id="ResourceSlice-QueryHead">
+            <div style="position:absolute;left:0%;width: 10%;top:5%">选择日期</div>
+            <div style="position:absolute;left:10%;width: 10%;top:5%">                
+                <a class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" id='nowdate' />
+                    <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </a>
+            </div>
+            <div style="position:absolute;left:30%;width: 10%;top:5%">选择资源类型</div>
+            <div style="position:absolute;left:40%;width: 20%;top:5%">
+                <select id="example28"  style="display: none;"> 
+                    {{#each ResourceList}}
+                    <option value="{{Type}}_{{Id}}">{{Type}}_{{Id}}_{{Name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="container" style="position:absolute;left:40%;width: 30%;top:5%">
+                <div style="position:absolute;left:80%;top:5%">
+                    <button type="button" class="btn btn-primary" href="javascript:;" onclick="OnQueryResourceSlices()" )> 查询</button>
+                </div>
+            </div>
+            <div style="position:absolute;top:150px">
+                <canvas id="myChart" width="1024" height="500"></canvas>
+            </div>
+        </div>
+</script>

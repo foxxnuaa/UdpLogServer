@@ -1,0 +1,91 @@
+.divcss5{width:10%}
+.rightlist{width:80%;position:absolute;left:12%;top:5%}
+.createbutton{position:absolute;left:12%;top:0}
+.createbuttoninput{width:60%;left:12%}
+.topbar{width:90%;position:absolute;left:12%;top:5%}
+
+.textcolor0{
+  color:#880000;
+}
+.textcolor1{
+    color:#ff00ff;
+}
+.textcolor2{
+    color:#999900;
+}
+.textcolor3{
+    color:#000000;
+}
+.textcolor4{
+    color:#ff0000;
+}
+
+container{
+    margin: 20px auto;
+    padding:0 15px;
+    width: 50%;
+    height:300px;
+    box-sizing: border-box;
+}
+.text-container{
+    display: inline-block;
+    float:left;
+    width: 15%;
+    height: 32px;
+    line-height: 32px;
+    box-sizing: border-box;
+}
+.selectContainer{
+    width: 70%;
+    height:200px;
+    float:left;
+    position: relative;
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.selectedContent{
+    width:85%;
+    height: 25px;
+    float:left;
+}
+.dropDown-toggle{
+    width:14%;
+    height:31px;
+    line-height: 31px;
+    text-align: center;
+    border: 1px solid silver;
+    border-left:none;
+    float:left;
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.dropDown-menu{
+    margin:0;
+    padding:0 15px 10px;
+    width:100%;
+    border:1px solid silver;
+    border-top: none;
+    box-sizing: border-box;
+    list-style: none;
+    position: absolute;
+    top:31px;
+    right:0;
+}
+.items{
+    margin-top:8px;
+    padding: 2px;
+    cursor: pointer;
+}
+.items:hover{
+    background: #ddd;
+}
+.isSelectedText{
+    display: inline-block;
+    width:90%;
+}
+.dsn{
+    display: none;
+}

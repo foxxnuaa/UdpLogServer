@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>兵锋日志系统</title>
+    <link rel="stylesheet" href="/css/bootstrap-3.0.3.min.css"/>
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <!--script src="js/jquery.min.1.6.4.js"></script-->
+    <link rel="stylesheet" href="tether-1.3.3/dist/css/tether.min.css"/>
+    <script src="tether-1.3.3/dist/js/tether.min.js"></script>
+    <script src="js/bootstrap-3.0.3.min.js"></script>
+    <script src="/js/spin.js"></script>
+    <link href="css/oart.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/bootstrap-select.min.css"/>
+    <link rel="stylesheet" href="/css/bootstrap-datetimepicker.min.css"/>
+    <script src="/js/moment-with-locales.js"></script>
+    <script src="/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="/js/bootstrap-select.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/js/bootstrap-select.min.js"></script>
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="/js/i18n/defaults-zh_CN.js"></script>
+    <script src="js/spin.js"></script>
+    <link href="/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="/js/plugins/piexif.min.js" type="text/javascript"></script>
+    <script src="/js/plugins/sortable.min.js" type="text/javascript"></script>
+    <script src="/js/plugins/purify.min.js" type="text/javascript"></script>
+    <script src="/js/fileinput.min.js"></script>
+    <script src="/themes/fa/theme.js"></script>
+    <script src="/js/locales/zh.js"></script>
+    <script src="/js/ajaxdealer.js"></script>
+    <script src="/js/oart.js"></script>
+    <script src="/js/handlebars.js"></script>
+    <script src="/js/bootstrap-modal.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+</head>
+
+<body>
+<p>兵锋日志系统</p>
+<!--ul class="nav nav-tabs topbar">
+  <li class="active"><a href="#" onclick="onClickShowServerList()">服务管理</a></li>
+  <li><a href="#" onclick="onClickShowPubList()">服务发布</a></li>
+</ul-->
+<ul class="nav nav-pills nav-stacked divcss5">
+    <li class="active" href="javascript:;" onclick="onClickGetDirs()"><a href="#">角色日志</a></li>
+    <li class="active" href="javascript:;" onclick="onClickGetRoomDirs()"><a href="#">房间日志</a></li>
+</ul>
+<div id="temp_template">
+</div>
+<div id="rightlist" class="rightlist">
+
+</div>
+<div id="filemanager_alian" class="rightlist">
+</div>
+<!--<button class="btn btn-primary btn-lg createbutton"   onclick="onClickCreateNew()">
+创建服务
+</button>-->
+<div id="right_table_serverlist">
+</div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<script id="ResourceList-template" type="text/x-handlebars-template">
+<div style="height:500px;overflow:scroll">
+<table class="table table-bordered table-hover" style="height:75%; overflow:scroll">
+    <caption>资源列表</caption>
+    <thead>
+    <tr>
+        <th>资源类型</th>
+        <th>资源ID</th>
+        <th>资源名</th>
+        <th>5分钟报警阈值</th>
+        <th>1小时报警阈值</th>
+        <th>1天报警阈值</th>
+        <th>过滤来源（用|分隔）</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+<tbody id="resource_list_tbody" >
+{{#each ResourceList}}
+<tr id="ResourceItem_{{resourceid}}">
+    <td><input type="text" class="form-control"  id="Type_{{resourceid}}"  value={{Type}} name=txt1 onchange="if(/\D/.test(this.value)){alert('只能输入数字');this.value='';}"></td>
+    <td><input type="text" class="form-control"  id="Id_{{resourceid}}"  value={{Id}} name=txt2 onchange="if(/\D/.test(this.value)){alert('只能输入数字');this.value='';}"></td>
+    <td><input type="text" class="form-control"  id="Name_{{resourceid}}"  value={{Name}}></td>
+    <td><input type="text" class="form-control"  id="FiveMinuteThreshold_{{resourceid}}"  value={{FiveMinuteThreshold}}></td>
+    <td><input type="text" class="form-control"  id="OneHourThreshold_{{resourceid}}"  value={{OneHourThreshold}}></td>
+    <td><input type="text" class="form-control"  id="OneDayThreshold_{{resourceid}}"  value={{OneDayThreshold}}></td>
+    <td><input type="text" class="form-control"  id="Filter_{{resourceid}}"  value={{Filter}}></td>
+    <td>
+        <button type="button" class="btn btn-primary"  href="javascript:;" onclick="OnClickSaveResource('{{resourceid}}')")> 保存</button>
+        <button type="button" class="btn btn-primary"  href="javascript:;" onclick="OnClickDelResource('{{resourceid}}')")> 删除</button>
+    </td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+</script>

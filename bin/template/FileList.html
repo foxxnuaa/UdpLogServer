@@ -1,0 +1,20 @@
+<script id="FileList_template" type="text/x-handlebars-template">
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>日志文件</th>
+        <!--th>下载</th-->
+    </tr>
+    </thead>
+<tbody>
+
+{{#each DirList}}
+<tr>
+    <td><a href="javascript:GetFileContent('{{FileDir}}/{{FileName}}','0|4',1)">({{FileCreateTime}})&nbsp;&nbsp;&nbsp;&nbsp;{{FileName}}</a></td>
+    <!--td><a href="staticfile/{{FileDir}}/{{FileName}}" onclick="window.open('staticfile/{{FileDir}}/{{FileName}}')"> 下载</a></td-->
+</tr>
+{{/each}}
+</tbody>
+</table>
+</script>

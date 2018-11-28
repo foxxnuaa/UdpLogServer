@@ -1,0 +1,46 @@
+<script id="FileContent_template" type="text/x-handlebars-template">
+输入页码:<br>
+<input type="text" id="PageNum" value={{CurrentPageNum}}>
+<button type="button" class="btn btn-default" onclick="GetFileContentByPageNum(-99,-99)">前往</button>
+总共:{{TotalPageNum}} 页  当前第 {{CurrentPageNum}} 页
+<div>
+<ul class="pagination">
+    <li><a onclick="GetFileContentByPageNum(0,1)">第一页</a></li>
+    <li id="PageItem_Pre"><a onclick="GetFileContentByPageNum(-1,0)">&laquo;</a></li>
+    {{#each PageItems}}
+    <li id="PageItem_{{this}}"><a onclick="GetFileContentByPageNum(0,{{this}})">{{this}}</a></li>
+    {{/each}}
+    <li id="PageItem_Next"><a onclick="GetFileContentByPageNum(1,0)">&raquo;</a></li>
+    <li><a onclick="GetFileContentByPageNum(0,{{TotalPageNum}})">最后一页</a></li>
+</ul>
+</div>
+
+<div class="btn-group" id="loglevel_group">
+        <input type="checkbox" value="0" onclick="FilterLog('0')" > 错误日志
+        <input type="checkbox" value="1" onclick="FilterLog('1')"> 断言日志
+        <input type="checkbox" value="2" onclick="FilterLog('2')"> 告警日志
+        <input type="checkbox" value="3" onclick="FilterLog('3')"> Debug日志
+        <input type="checkbox" value="4" onclick="FilterLog('4')"> 异常日志
+        <input type="checkbox" value="5" onclick="FilterLog('5')"> 全部
+</div>
+<div style="height:100px;overflow-y:scroll;overflow-x:none;">
+<table  border="0" cellspacing="0" cellpadding="0" style='font-size:6px;height:1000px;overflow-y:scroll' id="FileContentTable">
+    <thead>
+    <tr>
+        <th>日志等级</th>
+        <th>内容</th>
+    </tr>
+    </thead>
+<tbody>
+
+{{#each DirList}}
+<tr >
+    <td class="textcolor{{Level}}">{{Level}}</td>
+    <td class="textcolor{{Level}}" style="word-wrap:break-word;word-break:break-all;"> {{Content}}</td>
+</tr>
+{{/each}}
+
+</tbody>
+</table>
+</div>
+</script>
